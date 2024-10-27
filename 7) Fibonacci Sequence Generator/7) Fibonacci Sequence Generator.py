@@ -4,14 +4,20 @@
 # 5 --> [0, 1, 1, 2, 3]
 # 7 --> [0, 1, 1, 2, 3, 5, 8]
 
-def Generator(n):
-
+def fibonacci_sequence(n):
     if n <= 0:
         return []
-    list = [0, 1]
+    elif n == 1:
+        return [0]
+    elif n == 2:
+        return [0, 1]
+    
+    sequence = [0, 1]
     for i in range(2, n):
-        next_number = list[i - 1] + list[i - 2]
-        list.append(next_number)
-    return list[:n]
+        number = sequence[-1] + sequence[-2]
+        sequence.append(number)
+    
+    return sequence
 
-Generator()
+print(fibonacci_sequence(5))
+print(fibonacci_sequence(7))

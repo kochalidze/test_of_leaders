@@ -5,15 +5,16 @@
 # 0 --> 1
 
 
-def factorial():
-    n = int(input('Enter  a non-negative integer: '))
+def factorial(n):
     if n < 0:
-        print('Error: Factorial is not defined for nagetive numbers')
-    else:
-        result = 1
+        raise ValueError("Input must be a non-negative integer.")
     
+    result = 1
     for i in range(1, n + 1):
         result *= i
     return result
 
-factorial()
+
+print(factorial(5))
+print(factorial(0))
+

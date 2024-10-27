@@ -5,15 +5,12 @@
 # 10001 --> 17
 # 1111 --> 15
 
-def binary_to_decimal():
-    binary =  int(input("Enter a binary number: "))
-    decimal =  0
-    power = 0
-    for i in range(len(binary)-1, -1, -1):
-        if binary[i] == '1':
-            decimal += 2 ** power
-            power += 1 
-    
-        return decimal
+def binary_to_decimal(binary_str):
 
-binary_to_decimal()
+    decimal_value = int(binary_str, 2)
+    return decimal_value
+
+binary_input = input("Enter a binary number: ")
+decimal_output = binary_to_decimal(binary_input)
+
+print(f"The decimal value of binary {binary_input} is: {decimal_output}")
