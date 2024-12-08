@@ -4,10 +4,11 @@
 
 def anagras(string1, string2):
 
-    if len(string1) != len(string2):
-        return False
-    else:
-        return True
+    return sorted(string1.lower()) == sorted(string2.lower())
+
 
 print(anagras("listen", "silent"))
-print(anagras("hello", "world"))
+
+
+# შევქმენი ფუნქცია სადაც გადავეცი ორი სტრინგი, შემდეგ დავწერე კოდი: თუ პირველი სტრინგის სიგრძე არ უდრის მეორე სტრინგის სიგრძეს
+#   მაშინ დააბრუნოს False, სხვა შემთხვევაში დააბრუნოს True. შემდეგ ვიხძახებ ფუნქციას
