@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+}
+  
+#books, #library {
+    margin: 20px;
+}
+  
+.book-list, .library-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+  
+.book, .library-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+  
+  
+button {
+    margin-top: 10px;
+    width: 180px;
+    height: 40px; 
+    border-radius: 20px;
+    background-color: #ccc;
+    font-size: 15px;
+}
+button:hover {
+    background-color: #232323;
+    color: white;
+}
